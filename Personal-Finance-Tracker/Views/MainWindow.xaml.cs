@@ -10,14 +10,5 @@ namespace Personal_Finance_Tracker.Views
             InitializeComponent();
             DataContext = new MainViewModel();
         }
-
-        private void OnAddTransactionClick(object sender, RoutedEventArgs e)
-        {
-            var addTransactionWindow = new AddTransactionWindow();
-            if (addTransactionWindow.ShowDialog() == true)
-            {
-                ((MainViewModel)DataContext).Transactions.Add(addTransactionWindow.NewTransaction);
-            }
-        }
     }
 }

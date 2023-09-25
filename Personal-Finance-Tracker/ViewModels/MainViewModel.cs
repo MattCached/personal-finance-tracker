@@ -3,23 +3,26 @@ using Personal_Finance_Tracker.Models;
 using Personal_Finance_Tracker.Views;
 using System.ComponentModel;
 using System.Windows.Input;
+using System.Diagnostics;
 
 namespace Personal_Finance_Tracker.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<Transaction> Transactions { get; set; } = new ObservableCollection<Transaction>();
-        public ICommand AddTransactionCommand { get; private set; }
-
+        public ICommand OpenAddTransactionWindowCommand { get; private set; }
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public MainViewModel()
         {
-            AddTransactionCommand = new RelayCommand(AddTransaction);
+            OpenAddTransactionWindowCommand = new RelayCommand(OpenAddTransactionWindow);
         }
 
-        private void AddTransaction()
+        private void OpenAddTransactionWindow()
         {
+            
+            Debug.WriteLine("OpenAddTransactionWindow is called");
+            
             var addTransactionWindow = new AddTransactionWindow();
             if (addTransactionWindow.ShowDialog() == true)
             {

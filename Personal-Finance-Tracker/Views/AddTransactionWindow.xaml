@@ -22,7 +22,7 @@
         <DatePicker Name="DateInput" Grid.Row="1"/>
         
         <Label Content="Description" Grid.Row="2"/>
-        <TextBox Name="DescriptionInput" Grid.Row="3"/>
+        <TextBox Name="DescriptionInput" Grid.Row="3"/>        
         
         <Label Content="Amount" Grid.Row="4"/>
         <TextBox Name="AmountInput" Grid.Row="5"/>

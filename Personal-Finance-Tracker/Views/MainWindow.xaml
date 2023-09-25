@@ -13,7 +13,7 @@
 
         <Button 
             Content="Add Transaction" 
-            Command="{Binding OnAddTransactionClick}" 
+            Command="{Binding OpenAddTransactionWindowCommand}" 
             Grid.Row="0"/>
         
         <ListView ItemsSource="{Binding Transactions}" Grid.Row="1">
